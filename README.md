@@ -50,9 +50,25 @@ Developed by: Jagadeesh.A
 RegisterNumber: 24010183
 ```
 PROGRAM F1:
-![Screenshot (57)](https://github.com/user-attachments/assets/b17e74bc-548b-4e93-b3e3-9a3bd6705ef1)
+```
+module full_adder(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^c);
+assign carry= ( (a & b)| ( cin &(a ^ b ));
+endmodule
+```
+
 PROGRAM F2:
-![Screenshot (59)](https://github.com/user-attachments/assets/3d9d2510-6620-491e-bcac-077126f16f8c)
+```
+module full_subtractor(a,b,difference,borrow);
+input a,b,bin;
+output difference,borrow;
+assign difference= ( (a ^ b)^bin);
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b )));
+endmodule
+```
+
 
 
 **RTL Schematic**
